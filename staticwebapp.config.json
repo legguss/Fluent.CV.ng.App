@@ -5,7 +5,6 @@
     }
   ],
   "navigationFallback": {
-    "rewrite": "index.html",
-    "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
+    "rewrite": "fluent-cv-ng-app/index.html"
   }
 }
