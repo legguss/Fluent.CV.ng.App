@@ -8,8 +8,8 @@ describe('ExperienceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExperienceComponent ]
-    })
+    declarations: [ExperienceComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(ExperienceComponent);

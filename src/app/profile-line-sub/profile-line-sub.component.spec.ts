@@ -8,8 +8,8 @@ describe('ProfileLineSubComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfileLineSubComponent ]
-    })
+    declarations: [ProfileLineSubComponent]
+})
     .compileComponents();
 
     fixture = TestBed.createComponent(ProfileLineSubComponent);

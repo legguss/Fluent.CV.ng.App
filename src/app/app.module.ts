@@ -19,7 +19,8 @@ import {ProfileLineComponent} from './profile-line/profile-line.component'
 import {ProfileLineSubComponent} from './profile-line-sub/profile-line-sub.component'
 import {HistorySectionComponent} from './history-section/history-section.component'
 
-@NgModule({
+@NgModule(/* TODO(standalone-migration): clean up removed NgModule class manually or run the "Remove unnecessary NgModule classes" step of the migration again. 
+{
    declarations: [
       AppComponent,
       ResumeComponent,
@@ -45,7 +46,7 @@ import {HistorySectionComponent} from './history-section/history-section.compone
    ],
    providers: [],
    bootstrap: [AppComponent]
-})
+} */)
 
 export class AppModule
 {
