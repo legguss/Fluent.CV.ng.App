@@ -5,6 +5,6 @@
     }
   ],
   "navigationFallback": {
-    "rewrite": "fluent-cv-ng-app/index.html"
+    "rewrite": "index.html"
   }
 }
