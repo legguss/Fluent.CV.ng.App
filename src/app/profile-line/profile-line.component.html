@@ -1,0 +1,11 @@
+<div class='o-profile-line'>
+   <div class='o-profile-summary'>
+      <i class='fas fa-circle' *ngIf='!item.JustSummary'></i>
+      <div>{{ item.Summary }}</div>
+   </div>
+   <ng-container *ngIf='!item.JustSummary'>
+      <ng-container *ngFor='let line of item.Details'>
+         <ProfileLineSub [line]='line'></ProfileLineSub>
+      </ng-container>
+   </ng-container>
+</div>

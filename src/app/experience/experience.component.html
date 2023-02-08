@@ -1,0 +1,45 @@
+<div class='o-experience' *ngIf='experiences'>
+   <div class='o-profile-title'>
+      {{ experiences.Title }}
+   </div>
+   <div class='o-profile-info'>
+      <ng-container *ngIf='experiences.TokenizedSummary'>
+         <div class='o-sentence' *ngFor='let sentence of experiences?.TokenizedSummary'>
+        <span class='o-token-wrapper' *ngFor='let token of sentence; let index=index'>
+          <span class='o-bullet' *ngIf='index===0'>●</span>
+          <span>&nbsp;</span>
+          <span class='o-token'>{{ token.Text }}</span>  
+        </span>
+         </div>
+      </ng-container>
+   </div>
+   <div class='o-experience-body'>
+      <div *ngFor='let experience of experiences.Items' class='o-experience-line'>
+         <div class='o-experience-header'>
+            <div class='o-experience-period'>{{ experience.Period }}</div>
+            <div class='o-experience-company' *ngIf='experience.Company'>@ {{ experience.Company }}</div>
+            <div class='o-experience-role' *ngIf='experience.Role'>&nbsp;· {{ experience.Role }}</div>
+         </div>
+         <div class='o-sentence' *ngIf='experiences.Packed'>
+            <ng-container *ngFor='let detail of experience.TokenizedDetails'>
+            <span class='o-token-wrapper' *ngFor='let token of detail; let index=index'>
+                <span class='o-bullet' *ngIf='index===0'>●</span>
+                <span>&nbsp;</span>
+                <span class='o-token' [ngClass]='token.Type'>{{ token.Text }}</span>
+            </span>
+            </ng-container>
+         </div>
+         <ng-container *ngIf='!experiences.Packed'>
+            <ng-container *ngFor='let detail of experience.TokenizedDetails'>
+               <div class='o-sentence'>
+            <span class='o-token-wrapper' *ngFor='let token of detail; let index=index'>
+                <span class='o-bullet' *ngIf='index===0'>●</span>
+                <span>&nbsp;</span>
+                <span class='o-token' [ngClass]='token.Type'>{{ token.Text }}</span>
+            </span>
+               </div>
+            </ng-container>
+         </ng-container>
+      </div>
+   </div>
+</div>

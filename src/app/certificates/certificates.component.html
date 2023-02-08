@@ -1,0 +1,17 @@
+<div class='o-education' *ngIf='certificates'>
+   <div class='o-education-title'>
+      other certficates
+   </div>
+
+   <div class='o-education-info' *ngFor='let education of certificates'>
+      <div *ngIf='education.Degree' class='o-certificate-degree'>
+         <strong>{{ education?.When }} - {{ education?.Degree }} </strong>
+      </div>
+      <div *ngIf='education.School'>
+         {{ education?.School }}
+      </div>
+      <div *ngIf='education.Department'>
+         {{ education?.Department }}
+      </div>
+   </div>
+</div>

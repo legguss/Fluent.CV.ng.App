@@ -1,0 +1,10 @@
+<div class='o-skills' *ngIf='skills'>
+   <div class='o-skills-header'>{{ header }}</div>
+   <div class='o-skills-body'>
+      <div class='o-skill' [ngClass]="{'o-top-0':skill.Top===0,'o-top-1':skill.Top===1,'o-top-3':skill.Top===3}" *ngFor='let skill of skills'>
+         <div class='o-skill-label'>
+            {{ skill.Name }}
+         </div>
+      </div>
+   </div>
+</div>

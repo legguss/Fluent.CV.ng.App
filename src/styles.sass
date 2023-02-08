@@ -1,0 +1,613 @@
+$mainBackground: #fff
+$mainColor: #625a3e
+$editorBorder: #ffd800
+$bulletColor: #ffe555
+$experienceHeader: #81a42a
+$NarrowFont: 'Roboto Condensed', sans-serif
+$NormalFont: Roboto, sans-serif
+$RightTitleFontSize: 1.2em
+$LeftTitleFontSize: 1.4em
+$resumeLeftBackground: #f8f3d7
+$skillLabelBackground: #e4e1aa
+$Attila1: #d8ebff
+$Attila2: #89c4ff
+$Attila3: #0080ff
+$Attila4: #004589
+$Attila5: #121212
+$Azure1: #ffdb99
+$Azure2: #ffa500
+$Azure3: #c6e2ff
+$Azure4: #3399ff
+$Azure5: #002d7f
+$WinBlue: #00A4EF
+$WinGray: #737373
+$LightGray: #c9eef6
+$AttilaBulletColor: $Azure4
+$AttilaMainColor: $Attila5
+$TitleColor: #1480aa
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500;700&display=swap")
+i
+  padding-bottom: 0
+
+*
+  box-sizing: border-box
+
+html
+  padding: 0
+  margin: 0
+
+@media screen
+  body
+    box-sizing: border-box
+    height: 297mm
+    width: 210mm
+    margin: 0
+    padding: 5mm
+    font-size: 11pt
+
+body
+  font-weight: 400
+  font-family: $NormalFont
+
+.o-sentence
+  display: flex
+  line-height: 1rem
+  flex-flow: wrap
+  font-family: $NarrowFont
+
+  &:last-child
+    padding-bottom: 0
+
+.o-bullet
+  display: inline-flex
+  margin-left: 2px
+  color: $TitleColor
+  break-after: left
+
+
+.o-token-wrapper
+  display: inline-flex
+  margin-bottom: 3px
+
+.o-token
+  display: inline-flex
+  align-items: center
+
+.Verbs
+  color: $TitleColor
+  font-weight: bold
+
+.Products
+  font-weight: bold
+  color: #263bc0
+
+.Companies
+  font-weight: bold
+
+.Domains
+  font-weight: bold
+  color: #404040
+
+.Number
+  color: #4f4f4f
+  font-weight: bold
+  font-family: $NormalFont
+
+.Skills
+  background-color: #f9f6bd
+  padding-left: 6px
+  padding-right: 6px
+  border: 1px solid #e4e1aa
+  font-family: $NarrowFont
+  font-weight: bold
+  border-radius: 4px
+  color: #5f5f5f
+
+.o-resume
+  background: $mainBackground
+  color: $mainColor
+  display: block
+  position: relative
+
+.o-resume
+  background-color: transparent
+  color: $mainColor
+
+.o-project-section
+  margin-bottom: 8px
+  display: block
+
+.o-resume .o-title
+  margin-top: 4px
+  margin-bottom: 4px
+  font-weight: bold
+  color: #ff851e
+  text-transform: uppercase
+
+.o-resume .o-description, o-resume .o-description pre
+  color: #000000
+  padding: 6px
+
+.o-labels
+  margin-top: 2px
+
+.o-label
+  margin-right: 2px
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  border-radius: 4px
+  font-family: "Oswald", sans-serif
+  background-color: #fbf8be
+  color: #514b35
+  border: 1px solid #e4e1aa
+  padding: 1px 6px
+  margin-left: 3px
+  margin-bottom: 2px
+  white-space: nowrap
+  font-size: 75%
+  font-weight: 500
+
+.o-short-description
+  margin-left: 8px
+  flex-direction: column
+  display: flex
+  align-content: center
+  line-height: 160%
+  text-transform: none
+
+.o-next-page
+  display: block
+  page-break-after: always
+  page-break-inside: auto
+
+.o-resume-image
+  width: 66%
+  align-self: center
+
+.o-resume-image img
+  width: 100%
+
+.o-label-table
+  display: table
+
+.o-label-row
+  display: table-row
+
+.o-labels-caption
+  display: table-cell
+  font-size: 80%
+
+.o-labels-container
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+.o-labels-list
+  display: table-cell
+
+.o-status-labels
+  display: flex
+  flex-flow: row
+
+.o-resume-content
+  display: flex
+  flex-flow: column
+  background-color: $mainBackground
+  justify-content: space-between
+
+.o-resume-content-main
+  display: flex
+  flex-flow: row
+  background-color: $mainBackground
+
+.o-resume-left
+  display: flex
+  flex-flow: column
+  flex-grow: 1
+  flex-shrink: 1
+  flex-basis: 33%
+  background-color: $resumeLeftBackground
+  padding-left: 8px
+  padding-top: 8px
+  padding-right: 8px
+
+.o-resume-right
+  display: flex
+  padding-left: 12px
+  flex-flow: column
+  flex-grow: 2
+  flex-shrink: 2
+  flex-basis: 67%
+  min-height: calc(100%)
+  height: calc(100%)
+
+.o-resume-name
+  font-size: 230%
+  font-family: $NormalFont
+  font-weight: bold
+  align-self: center
+
+.o-current-title
+  text-transform: uppercase
+  font-size: 130%
+  margin-top: 10px
+  margin-bottom: 10px
+  align-self: center
+
+.o-personal-info
+  margin-top: 10px
+  line-height: 100%
+
+.o-personal-info-table
+  display: table
+
+.o-personal-info-row
+  display: table-row
+
+.o-personal-info-cell
+  display: table-cell
+
+.o-personal-info-cell.o-caption
+  text-align: left
+  padding-right: 5px
+  padding-bottom: 8px
+
+.o-profile
+  display: flex
+  flex-flow: column
+
+.o-profile-title
+  // text-transform: uppercase
+  font-size: $RightTitleFontSize
+  font-weight: bold
+  font-family: $NormalFont
+  padding-bottom: 6px
+  padding-top: 6px
+
+.o-profile-info
+  font-size: 1em
+
+  .o-sentence
+    display: flex
+    font-family: $NormalFont
+
+.o-education
+  display: flex
+  flex-flow: column
+  justify-content: center
+  align-content: center
+
+.o-education-title
+  text-transform: uppercase
+  font-size: $RightTitleFontSize
+  font-weight: bold
+  font-family: $NarrowFont
+  padding-bottom: 10px
+  padding-top: 10px
+  text-align: center
+
+.o-education-info
+  font-size: 95%
+  padding-bottom: 8px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  div
+    display: flex
+    text-align: center
+
+.o-education-info:last-child
+  padding-bottom: 0
+
+.o-education-school
+  font-family: $NarrowFont
+
+.o-certificate-degree
+  font-family: $NarrowFont
+
+.o-project-body
+  margin-left: 10px
+  display: flex
+  flex-direction: row
+
+.o-project-left
+  flex-basis: 55%
+  max-width: 55%
+  flex-grow: 55
+  flex-shrink: 55
+
+.o-project-right
+  flex-basis: 45%
+  max-width: 45%
+  flex-grow: 45
+  flex-shrink: 45
+
+.o-experience
+  margin-right: 0
+
+.o-experiences-title
+  padding-top: 8px
+  padding-bottom: 0
+  font-weight: bold
+  // text-transform: uppercase
+  font-size: $RightTitleFontSize
+  color: $TitleColor
+
+.o-experience-header
+  display: flex
+  flex-flow: row
+  padding-top: 8px
+  padding-bottom: 4px
+  font-family: $NarrowFont
+  font-weight: bold
+  color: $experienceHeader
+
+.o-experience-period
+  color: $TitleColor
+
+.o-experience-company
+  padding-left: 6px
+  color: #132a34
+
+.o-experience-role
+  color: $WinGray
+
+.o-experience-body
+  display: flex
+  flex-flow: column
+  justify-content: flex-start
+  flex-wrap: wrap
+
+.o-experience-line
+  display: flex
+  flex-flow: column
+
+  .o-sentence
+    font-family: $NormalFont
+
+.o-resume-page
+  //min-height: 290mm
+  //height: 290mm
+  position: relative
+
+.o-project-history
+  padding-left: 5px
+  padding-top: 5px
+
+.o-project-history-title
+  padding-top: 40px
+  padding-bottom: 5px
+  display: flex
+  justify-content: center
+  font-size: 1.5rem
+  color: $TitleColor
+  font-weight: bold
+
+.o-experience i, .o-story-line i
+  color: $bulletColor
+  font-size: 0.8rem
+
+.o-skills
+  margin-top: 0
+
+.o-skills-header
+  display: flex
+  font-weight: bold
+  font-size: $RightTitleFontSize
+  font-family: $NarrowFont
+  padding-bottom: 10px
+  padding-top: 10px
+  justify-content: center
+  text-transform: uppercase
+
+.o-skills-body
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  max-width: calc(100%)
+
+.o-skill
+  padding-top: 2px
+  padding-bottom: 2px
+  padding-left: 2px
+  padding-right: 2px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  flex-grow: 1
+  width: auto
+
+.o-skill-label
+  padding: 2px 7px
+  font-size: 82%
+  font-family: $NarrowFont
+  text-transform: uppercase
+  color: #403b2b
+  font-weight: 700
+  display: inline-flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  text-align: center
+  background-color: $skillLabelBackground
+  border-radius: 6px
+
+.o-skill-label.o-top-0
+  font-weight: bold
+  font-size: 95%
+
+.o-skill-label.o-top-1
+  font-size: 85%
+  font-weight: normal
+
+.o-skill-label.o-top-3
+  font-size: 70%
+  font-weight: normal
+
+.o-story-item
+  flex-flow: row
+  display: flex
+  align-content: center
+  padding-bottom: 6px
+
+.o-story-item:last-child
+  padding-bottom: 0
+
+.o-profile-summary
+  display: flex
+  flex-flow: row
+  align-items: center
+
+.o-profile-status
+  margin-bottom: 5px
+
+.o-profile-status-title
+  margin-bottom: 5px
+  font-weight: bold
+  font-size: 95%
+  text-transform: uppercase
+
+.o-profile-line i
+  margin-left: 5px
+  margin-right: 5px
+  font-size: 70%
+  padding-top: 5px
+  color: #ffd800
+
+.o-profile-line-sub
+  font-family: $NarrowFont
+  flex-flow: row
+  display: flex
+  align-items: center
+  font-size: 85%
+  padding-top: 3px
+  padding-left: 20px
+
+.o-profile-line-sub i
+  margin-left: 5px
+  margin-right: 5px
+  font-size: 70%
+  padding-top: 3px
+  color: $bulletColor
+
+.o-resume-project-header
+  display: flex
+  flex-direction: row
+  align-content: center
+  margin-bottom: 3px
+
+.o-project-description-line i
+  color: gainsboro
+  font-size: 80%
+
+.o-indent-1
+  padding-left: 14px
+
+.o-story-line
+  display: flex
+
+.o-story-line i
+  margin-top: 5px
+  padding-right: 5px
+
+.o-page-break
+  page-break-after: always
+
+.o-statuses
+  display: flex
+  flex-flow: row
+
+.o-statuses .o-label
+  padding-top: 2px
+
+.o-history
+  display: flex
+  flex-direction: column
+
+  .o-header
+    padding-top: 10px
+    padding-bottom: 8px
+    display: flex
+    font-size: 1rem
+    font-weight: bold
+
+    .o-period
+      padding-right: 0.5rem
+      color: $TitleColor
+
+    .o-role
+      color: $WinGray
+
+.hilda
+  .o-resume-image
+    display: none
+
+  .o-skill-label.o-top-3
+    font-size: 90%
+    font-weight: bold
+
+  .Products
+    color: #22863b
+
+  .Number
+    color: inherit
+    font-weight: normal
+    font-family: $NormalFont
+
+.attila
+  color: $AttilaMainColor
+
+  .o-experience i, .o-story-line i
+    color: $AttilaBulletColor
+    font-size: 100%
+
+  .o-resume-left
+    background-color: $LightGray
+
+  .o-skill-label
+    background-color: #90E0EF
+    color: #000
+
+  .o-profile-title, .o-experience-title
+    color: #0096C7
+
+.attila-word
+  color: $AttilaMainColor
+
+  .o-experience i, .o-story-line i
+    color: $AttilaBulletColor
+    font-size: 100%
+
+  .o-resume-left
+    background-color: transparent
+
+  .o-skill-label
+    background-color: transparent
+    color: #000
+
+  .o-profile-title, .o-experience-title
+    color: #0096C7
+
+  .Skills
+    background-color: transparent
+    color: #0096C7
+    border: none
+
+@media print
+  body
+    margin-top: 4mm
+    margin-left: 5mm
+    margin-right: 5mm
+  .o-resume-left
+    min-height: 280mm
+  .o-page-break
+    page-break-after: auto
+    break-after: auto
+    page-break-before: auto
+    float: none
+
+    body
+      background-color: white !important

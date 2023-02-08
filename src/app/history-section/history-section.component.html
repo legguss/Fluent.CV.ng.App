@@ -1,0 +1,16 @@
+<div class='o-history'>
+   <div class='o-header'>
+      <div class='o-period' *ngIf='history.Period'>{{ history.Period }}</div>
+      <div class='o-company' *ngIf='history.Company'>{{ history.Company }}</div>
+      <div class='o-role' *ngIf='history.Role'>&nbsp;· {{ history.Role }}</div>
+   </div>
+   <div class='o-sentence'>
+      <ng-container *ngFor='let section of history.Sections'>
+        <span class='o-token-wrapper' *ngFor='let token of section;let index=index'>
+            <span class='o-bullet' *ngIf='!index'>●</span>
+            <span>&nbsp;</span>
+            <span class='o-token' [ngClass]='token.Type'>{{ token.Text }}</span>
+          </span>
+      </ng-container>
+   </div>
+</div>

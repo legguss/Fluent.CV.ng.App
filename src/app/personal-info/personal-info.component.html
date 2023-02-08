@@ -1,0 +1,44 @@
+<div class='o-personal-info'>
+   <div class='o-personal-info-table'>
+      <div class='o-personal-info-row' *ngIf='personal.Phone'>
+         <div class='o-personal-info-cell o-caption'>
+            Phone:
+         </div>
+         <div class='o-personal-info-cell o-info'>
+            {{ personal.Phone }}
+         </div>
+      </div>
+      <div class='o-personal-info-row' *ngIf='personal.Email'>
+         <div class='o-personal-info-cell o-caption'>
+            Email:
+         </div>
+         <div class='o-personal-info-cell o-info'>
+            {{ personal.Email }}
+         </div>
+      </div>
+      <div class='o-personal-info-row' *ngIf='personal.Skype'>
+         <div class='o-personal-info-cell o-caption'>
+            Skype:
+         </div>
+         <div class='o-personal-info-cell o-info'>
+            {{ personal.Skype }}
+         </div>
+      </div>
+      <div class='o-personal-info-row' *ngIf='personal.WebSite'>
+         <div class='o-personal-info-cell o-caption'>
+            Website:
+         </div>
+         <div class='o-personal-info-cell o-info'>
+            {{ personal.WebSite }}
+         </div>
+      </div>
+      <div class='o-personal-info-row' *ngIf='personal.LinkedIn'>
+         <div class='o-personal-info-cell o-caption'>
+            LinkedIn:
+         </div>
+         <div class='o-personal-info-cell o-info'>
+            <a [href]='personal.LinkedIn' title='LinkedIn profile'>{{ personal.FullName }}</a>
+         </div>
+      </div>
+   </div>
+</div>

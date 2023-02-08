@@ -1,0 +1,10 @@
+<div class='o-profile'>
+   <div class='o-profile-status' *ngFor='let status of statuses'>
+      <div class='o-profile-title'>
+         {{ status.Title }}
+      </div>
+      <div class='o-profile-info' *ngFor='let item of status.Items'>
+         <ProfileLine [item]='item'></ProfileLine>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,14 @@
+<div class='o-profile' *ngIf='story'>
+   <div class='o-profile-title' *ngIf='story.Title'>
+      {{ story.Title }}
+   </div>
+   <div class='o-profile-info'>
+      <div class='o-sentence' *ngFor='let item of story.TokenizedItems'>
+        <span class='o-token-wrapper' *ngFor='let token of item; let index=index'>
+          <span class='o-bullet' *ngIf='index===0'>●</span>
+          <span>&nbsp;</span>
+          <span class='o-token'>{{ token.Text }}</span>  
+        </span>
+      </div>
+   </div>
+</div>
